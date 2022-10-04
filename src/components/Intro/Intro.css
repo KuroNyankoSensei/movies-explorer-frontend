@@ -1,6 +1,6 @@
 .intro {
     background-color: #f5f5f5;
-    max-width: 1200px;
+    width: calc(100% - 70px * 2);
     height: 493px;
     border-radius: 10px;
     display: flex;
@@ -18,31 +18,34 @@
     text-align: center;
     letter-spacing: -0.04em;
     color: #000;
-    max-width: calc(100% - 275px * 2);
+    width: calc(100% - 275px * 2);
 }
 
 @media screen and (max-width: 900px) {
-    .promo {
-        height: 524px;
+    .intro {
+        height: 835px;
+        width: calc(100% - 30px * 2);
     }
 
-    .promo__title {
-        font-size: 31px;
-        line-height: 1.26;
-        max-width: calc(100% - 19px * 2);
+    .intro__title {
+        font-size: 40px;
+        line-height: 52px;
+        width: calc(100% - 25px * 2);
+        padding: 0 80px;
     }
 }
 
 @media screen and (max-width: 475px) {
 
-    .promo {
+    .intro {
         height: 570px;
+        width: calc(100% - 10px * 2);
     }
 
-    .promo__title {
-        font-size: 31px;
-        line-height: 1.26;
-        max-width: calc(100% - 10px * 2);
+    .intro__title {
+        font-size: 29px;
+        line-height: 37px;
+        width: calc(100% - 5px * 2);
+        padding: 0;
     }
-
 }

@@ -38,6 +38,16 @@
 
 @media screen and (max-width: 475px) {
     .navtab__link {
-        margin-right: 24px;
+        width: 82px;
+        height: 26px;
+        font-size: 10px;
+        line-height: 16px;
+        border-radius: 6px;
+        margin: 0;
+    }
+
+    .navtab__links {
+        gap: 5px;
+        margin: -50px 0 0 0;
     }
 }

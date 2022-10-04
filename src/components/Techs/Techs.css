@@ -115,6 +115,7 @@
     }
 
     .techs__items {
-        padding: 0 30px;
+        padding: 0 79px;
+        justify-content: flex-start;
     }
 }

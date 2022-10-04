@@ -3,9 +3,10 @@ import './Header.css';
 import Navigation from "../Navigation/Navigation";
 import NavigationMain from "../NavigationMain/NavigationMain";
 import Logo from "../Logo/Logo";
+import MenuButton from "../MenuButton/MenuButton";
 
 
-function Header({ page }) {
+function Header({ onMenuButton, page }) {
 
     if (page) {
         return (
@@ -23,6 +24,9 @@ function Header({ page }) {
             <div className="header__container">
                 <Logo />
                 <Navigation />
+                <MenuButton
+                    onMenuButton={onMenuButton}
+                />
             </div>
         </header>
     );
