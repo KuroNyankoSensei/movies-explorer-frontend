@@ -9,6 +9,8 @@ import Login from '../Login/Login';
 import NotFound from '../NotFound/NotFound';
 import { useState, useEffect } from 'react';
 import NavigationMobile from '../NavigationMobile/NavigationMobile';
+import Movies from '../Movies/Movies';
+import SavedMovies from '../SavedMovies/SavedMovies';
 
 function App() {
 
@@ -56,6 +58,20 @@ function App() {
             onMenuButton={handleOpenMobileMenu}
           />
           <Profile />
+        </Route>
+        <Route path="/movies">
+          <Header
+            onMenuButton={handleOpenMobileMenu}
+          />
+          <Movies />
+          <Footer />
+        </Route>
+        <Route path="/saved-movies">
+          <Header
+            onMenuButton={handleOpenMobileMenu}
+          />
+          <SavedMovies />
+          <Footer />
         </Route>
         <Route path="*">
           <NotFound />
