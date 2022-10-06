@@ -9,7 +9,7 @@
     text-decoration: none;
     display: flex;
     flex-direction: column-reverse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 30px rgb(0 0 0 / 8%);
 }
 
 .movies-card__image {

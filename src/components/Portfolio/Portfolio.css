@@ -38,6 +38,13 @@
     text-decoration: none;
 }
 
+.portfolio__link-text {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
 .portfolio__link:first-of-type {
     margin: 0;
 }
