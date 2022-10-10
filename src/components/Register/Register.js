@@ -3,8 +3,8 @@ import './Register.css';
 import Logo from "../Logo/Logo";
 import AuthForm from "../AuthForm/AuthForm";
 
-function Register() {
-    return(
+function Register({ onSubmit }) {
+    return (
         <section className="register">
             <Logo />
             <h1 className="register__title">Добро пожаловать!</h1>
@@ -14,6 +14,7 @@ function Register() {
                 text="Уже зарегистрированы? "
                 linkText="Войти"
                 link="/signin"
+                onSubmit={onSubmit}
             />
         </section>
     )

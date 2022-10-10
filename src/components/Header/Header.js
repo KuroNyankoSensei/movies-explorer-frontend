@@ -6,9 +6,9 @@ import Logo from "../Logo/Logo";
 import MenuButton from "../MenuButton/MenuButton";
 
 
-function Header({ onMenuButton, page }) {
+function Header({ onMenuButton, page, loggedIn }) {
 
-    if (page) {
+    if (!loggedIn) {
         return (
             <header className="header header_main">
                 <div className="header__container">
@@ -20,7 +20,7 @@ function Header({ onMenuButton, page }) {
     }
 
     return (
-        <header className="header">
+        <header className={`header ${page === "main" && 'header_main'}`}>
             <div className="header__container">
                 <Logo />
                 <Navigation />

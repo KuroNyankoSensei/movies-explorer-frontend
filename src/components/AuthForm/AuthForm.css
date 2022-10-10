@@ -50,12 +50,6 @@
     border-bottom: 1px solid #2BE080;
 }
 
-.auth-form__input:invalid {
-    outline: 1px solid #e02b2b;
-    background-color: #e02b2b12;
-}
-
-
 .auth-form__error {
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
@@ -93,7 +87,7 @@
     opacity: .8;
 }
 
-.auth-form__btn_disabled {
+.auth-form__btn:disabled {
     background-color: #A0A0A0;
     cursor: default;
 }

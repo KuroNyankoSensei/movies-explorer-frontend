@@ -3,8 +3,8 @@ import AuthForm from "../AuthForm/AuthForm";
 import Logo from "../Logo/Logo";
 import './Login.css';
 
-function Login() {
-    return(
+function Login({ onSubmit }) {
+    return (
         <section className="login">
             <Logo />
             <h1 className="login__title">Рады видеть!</h1>
@@ -14,6 +14,7 @@ function Login() {
                 text="Ещё не зарегистрированы? "
                 linkText="Регистрация"
                 link="/signup"
+                onSubmit={onSubmit}
             />
         </section>
     )

@@ -13,6 +13,7 @@ import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import { currentUserContext } from '../../contexts/currentUserContext';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 function App() {
 
@@ -72,26 +73,26 @@ function App() {
           <Route path='/signin'>
             <Login />
           </Route>
-          <Route path="/profile">
+          <ProtectedRoute path="/profile">
             <Header
               onMenuButton={handleOpenMobileMenu}
             />
             <Profile />
-          </Route>
-          <Route path="/movies">
+          </ProtectedRoute>
+          <ProtectedRoute path="/movies">
             <Header
               onMenuButton={handleOpenMobileMenu}
             />
             <Movies />
             <Footer />
-          </Route>
-          <Route path="/saved-movies">
+          </ProtectedRoute>
+          <ProtectedRoute path="/saved-movies">
             <Header
               onMenuButton={handleOpenMobileMenu}
             />
             <SavedMovies />
             <Footer />
-          </Route>
+          </ProtectedRoute>
           <Route path="*">
             <NotFound />
           </Route>
