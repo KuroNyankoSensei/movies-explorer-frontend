@@ -20,7 +20,6 @@
 .movies-card__info {
     width: 100%;
     display: flex;
-    /* align-items: center; */
     box-sizing: border-box;
     padding: 15px;
     justify-content: space-between;
@@ -59,8 +58,8 @@
     background: url('../../images/like-active.svg') #F9F9F9 no-repeat center;
 }
 
-.movies-card__btn:hover {
-    cursor: pointer;
+.movies-card__btn_active:hover {
+    background: url('../../images/like-delete.svg') #F9F9F9 no-repeat center;
 }
 
 .movies-card__btn_delete {
@@ -72,6 +71,9 @@
     background: url('../../images/like-delete.svg') #F9F9F9 no-repeat center;
 }
 
+.movies-card:hover .movies-card__btn_delete {
+    background: url('../../images/like-delete.svg') #F9F9F9 no-repeat center;
+}
 
 .movies-card__timing {
     margin: 0;
