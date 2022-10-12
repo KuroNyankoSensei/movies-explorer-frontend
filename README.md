@@ -20,3 +20,7 @@ https://kuronyankonoeiga.nomoredomains.sbs
 ## Файл дизайн проекта
 
 https://disk.yandex.ru/d/qnABBvU9JwiWKQ
+
+## Pull request
+
+https://github.com/KuroNyankoSensei/movies-explorer-frontend/pull/2
