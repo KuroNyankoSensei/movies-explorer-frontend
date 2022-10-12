@@ -9,6 +9,7 @@
 .movies-card-list__container {
     width: calc(100% - 70px * 2);
     display: grid;
+    place-items: center;
     row-gap: 38px;
     column-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

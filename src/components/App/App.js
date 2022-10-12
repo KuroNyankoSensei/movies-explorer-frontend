@@ -26,6 +26,12 @@ function App() {
 
   const [isOpenMobileMenu, setOpenMobileMenu] = useState(false);
 
+  const [isInfoToolTipOpen, setInfoToolTipOpen] = useState(false);
+
+  const [infoToolTipInformation, setInfoToolTipInformation] = useState({});
+
+  const [savedMovies, setSavedMovies] = useState([]);
+
   const handleOpenMobileMenu = () => {
     setOpenMobileMenu(true);
   }
@@ -47,10 +53,6 @@ function App() {
     return () => document.removeEventListener('keydown', handleCloseByEsc)
   });
 
-  const [isInfoToolTipOpen, setInfoToolTipOpen] = useState(false);
-
-  const [infoToolTipInformation, setInfoToolTipInformation] = useState({});
-
   const handleInfoToolTip = (message, isGood) => {
     setInfoToolTipInformation({ message, isGood });
     setInfoToolTipOpen(true);
@@ -60,8 +62,6 @@ function App() {
     setInfoToolTipOpen(false);
     setInfoToolTipInformation({});
   }
-
-  const [savedMovies, setSavedMovies] = useState([]);
 
   useEffect(() => {
     handleTokenCheck();

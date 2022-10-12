@@ -1,7 +1,8 @@
 import React from "react";
 import "./MoviesCard.css";
 import { IMAGES_BASE_URL } from "../../utils/constants";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import mainApi from "../../utils/MainApi";
 
 function MoviesCard({ card, handleInfoToolTip, handleDeleteMovie, page }) {
@@ -57,6 +58,40 @@ function MoviesCard({ card, handleInfoToolTip, handleDeleteMovie, page }) {
 
     return (
         <article className="movies-card">
+
+            <div className="movies-card__info">
+                <div>
+                    <h3 className="movies-card__title">{card.nameRU}</h3>
+                    <p className="movies-card__timing">{duration(card.duration)}</p>
+                </div>
+                {
+                    isSaved && page === 'savedMovies' &&
+                    <button
+                        className="movies-card__btn movies-card__btn_delete"
+                        type="button"
+                        onClick={cardClick}
+                    >
+                    </button>
+                }
+                {
+                    isSaved && page === 'movies' &&
+                    <button
+                        className="movies-card__btn movies-card__btn_active"
+                        type="button"
+                        onClick={cardClick}
+                    >
+                    </button>
+                }
+                {
+                    !isSaved &&
+                    <button
+                        className="movies-card__btn"
+                        type="button"
+                        onClick={cardClick}
+                    >
+                    </button>
+                }
+            </div>
             <a
                 href={card.trailerLink}
                 className="movies-card__link"
@@ -68,42 +103,8 @@ function MoviesCard({ card, handleInfoToolTip, handleDeleteMovie, page }) {
                     className="movies-card__image"
                     alt={`"${card.nameRU}"`}
                 />
-                <div className="movies-card__info">
-                    <div>
-                        <h3 className="movies-card__title">{card.nameRU}</h3>
-                        {
-                            isSaved && page === 'savedMovies' &&
-                            <button
-                                className="movies-card__btn movies-card__btn_delete"
-                                type="button"
-                                onClick={cardClick}
-                            >
-                            </button>
-                        }
-                        {
-                            isSaved && page === 'movies' &&
-                            <button
-                                className="movies-card__btn movies-card__btn_active"
-                                type="button"
-                                onClick={cardClick}
-                            >
-                            </button>
-                        }
-                        {
-                            !isSaved &&
-                            <button
-                                className="movies-card__btn"
-                                type="button"
-                                onClick={cardClick}
-                            >
-                            </button>
-                        }
-
-                        <p className="movies-card__timing">{duration(card.duration)}</p>
-                    </div>
-                    <button className="movies-card__btn" type="button"></button>
-                </div>
             </a>
+
         </article>
     )
 };

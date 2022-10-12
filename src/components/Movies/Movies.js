@@ -78,7 +78,13 @@ function Movies({ handleSaveMovie, handleInfoToolTip }) {
 
     return (
         <main className="movies-page">
-            <SearchForm />
+            <SearchForm
+                setShort={handleChangeToggle}
+                filterMovies={handleFilterMovies}
+                isShort={isShort}
+                searchError={error}
+                page='movies'
+            />
             <Preloader
                 isOn={isLoading}
             />
